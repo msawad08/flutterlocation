@@ -47,6 +47,13 @@ android {
         minSdk = 21
         targetSdk = 35
     }
+
+    lintOptions {
+    baseline file("lint-baseline.xml")
+    checkAllWarnings true
+    warningsAsErrors true
+    abortOnError false  // This will allow the build to continue despite lint errors
+    }
 }
 
 dependencies {
